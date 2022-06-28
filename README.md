@@ -1,16 +1,10 @@
 # algorizaui
 
-First UI task
+First Task with Responsize UI
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+ScreenShoot:
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+OnBoarding Screen             |  Login Screen             |Register Screen
+:-------------------------:|:-------------------------:|:-------------------------:
+![WhatsApp Image 2022-06-28 at 7 31 55 PM](https://user-images.githubusercontent.com/91211054/176246706-3d6af5e6-945b-4bf0-a9ad-ac3d9f853c61.jpeg) | ![WhatsApp Image 2022-06-28 at 7 31 57 PM](https://user-images.githubusercontent.com/91211054/176246807-d41272ee-43d9-48dd-b36b-01a3e846fa92.jpeg) | ![WhatsApp Image 2022-06-28 at 7 31 57 PM (1)](https://user-images.githubusercontent.com/91211054/176246859-697d0ed0-8985-4397-b5e3-f1c876afdf93.jpeg)
