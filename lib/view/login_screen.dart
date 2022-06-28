@@ -26,7 +26,9 @@ class LoginScreen extends StatelessWidget {
                 Container(
                   width: Dimensions.screenWidth,
                   height: Dimensions.height30*10,
-                  color: Colors.blue,
+                  decoration: const BoxDecoration(
+                    image: DecorationImage(image: AssetImage('images/background.png'),fit: BoxFit.cover)
+                  ),
                 ),
                 Expanded(
                     child: Padding(
@@ -144,10 +146,10 @@ class LoginScreen extends StatelessWidget {
                         child: Center(
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
-                            children: const [
-                              Icon(FontAwesomeIcons.google),
-                              SizedBox(width: 5,),
-                              Text('Sign with by google', style: TextStyle(color: ColorsApp.buttonColor,fontWeight: FontWeight.bold,fontSize: 14),),
+                            children: [
+                              Image.asset('images/google.png',width: Dimensions.height20*1.2,),
+                              const SizedBox(width: 10,),
+                              const Text('Sign with by google', style: TextStyle(color: ColorsApp.buttonColor,fontWeight: FontWeight.bold,fontSize: 14),),
                             ],
                           ),
                         ),

@@ -29,11 +29,30 @@ class RegisterScreen extends StatelessWidget {
             resizeToAvoidBottomInset: false,
             body: Column(
               children: [
-                Container(
-                  width: Dimensions.screenWidth,
-                  height: Dimensions.height30*3,
-                  color: Colors.blue,
-                ),
+                Stack(children: [
+                  Container(
+                    width: Dimensions.screenWidth,
+                    height: Dimensions.height30*3,
+                    decoration: const BoxDecoration(
+                        image: DecorationImage(image: AssetImage('images/background.png'),fit: BoxFit.cover)
+                    ),                ),
+                  Positioned(
+                    bottom: 10,
+                    left: 10,
+                    child: InkWell(
+                      onTap: (){
+                        AppRoute.pushReplacement(LoginScreen());
+                      },
+                      child: CircleAvatar(
+                        radius: Dimensions.height15,
+                        backgroundColor: Colors.black,
+                        child: Padding(
+                          padding: EdgeInsets.only(left: Dimensions.height10/2),
+                          child: Icon(Icons.arrow_back_ios,color: Colors.white,size: Dimensions.height15,),
+                        ),
+                      ),
+                    ),
+                  )],),
                 Expanded(child: Padding(
                   padding: const EdgeInsets.all(15.0),
                   child: Column(
@@ -60,7 +79,7 @@ class RegisterScreen extends StatelessWidget {
                       Text('Email', style: TextStyle(color: Colors.grey.shade600,fontWeight: FontWeight.bold,fontSize: 14),),
                       SizedBox(height: Dimensions.height10/2,),
                       TextFieldApp(controller: email, validation: 'email is not registered',hint: 'EG. example@emai.com',isPassword: false,),
-                      SizedBox(height: Dimensions.height20,),
+                      SizedBox(height: Dimensions.height20/5,),
                       Text('Phone Number', style: TextStyle(color: Colors.grey.shade600,fontWeight: FontWeight.bold,fontSize: 14),),
                       SizedBox(height: Dimensions.height10/2,),
                       Column(
@@ -117,7 +136,7 @@ class RegisterScreen extends StatelessWidget {
 
                         ],
                       ),
-                      SizedBox(height: Dimensions.height20,),
+                      SizedBox(height: Dimensions.height20/5,),
                       Text('password', style: TextStyle(color: Colors.grey.shade600,fontWeight: FontWeight.bold,fontSize: 14),),
                       SizedBox(height: Dimensions.height10/2,),
                       TextFieldApp(controller: password, validation: 'password is not registered',isPassword: true,hint: 'Password',),
@@ -163,10 +182,10 @@ class RegisterScreen extends StatelessWidget {
                         child: Center(
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
-                            children: const [
-                              Icon(FontAwesomeIcons.google),
-                              SizedBox(width: 5,),
-                              Text('Sign with by google', style: TextStyle(color: ColorsApp.buttonColor,fontWeight: FontWeight.bold,fontSize: 14),),
+                            children:  [
+                              Image.asset('images/google.png',width: Dimensions.height20*1.2,),
+                              const SizedBox(width: 10,),
+                              const Text('Sign with by google', style: TextStyle(color: ColorsApp.buttonColor,fontWeight: FontWeight.bold,fontSize: 14),),
                             ],
                           ),
                         ),

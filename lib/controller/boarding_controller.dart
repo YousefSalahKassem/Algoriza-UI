@@ -59,7 +59,7 @@ class BoardingController extends GetxController{
       margin: const EdgeInsets.only(right: 5),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20),
-        color: currentIndex==index?ColorsApp.dotsColor:Colors.grey,
+        color: currentIndex==index?ColorsApp.dotsColor:Colors.grey.withOpacity(.3),
       ),
     );
   }
