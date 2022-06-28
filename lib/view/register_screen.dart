@@ -3,9 +3,7 @@ import 'package:algorizaui/controller/authController.dart';
 import 'package:algorizaui/view/login_screen.dart';
 import 'package:country_code_picker/country_code_picker.dart';
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
-
 import '../components/Buttons.dart';
 import '../components/rich_text.dart';
 import '../constants/colors.dart';
@@ -36,6 +34,7 @@ class RegisterScreen extends StatelessWidget {
                     decoration: const BoxDecoration(
                         image: DecorationImage(image: AssetImage('images/background.png'),fit: BoxFit.cover)
                     ),                ),
+
                   Positioned(
                     bottom: 10,
                     left: 10,
@@ -52,7 +51,9 @@ class RegisterScreen extends StatelessWidget {
                         ),
                       ),
                     ),
-                  )],),
+                  )],
+                ),
+
                 Expanded(child: Padding(
                   padding: const EdgeInsets.all(15.0),
                   child: Column(
@@ -60,6 +61,7 @@ class RegisterScreen extends StatelessWidget {
                     children: [
                       SizedBox(height: Dimensions.height10/2,),
                       const Text('Welcome to Fashion Daily',style: TextStyle(color: Colors.grey,fontWeight: FontWeight.bold,fontSize: 14),),
+
                       Padding(
                         padding:  EdgeInsets.symmetric(vertical: Dimensions.height20),
                         child: Row(
@@ -76,10 +78,12 @@ class RegisterScreen extends StatelessWidget {
                           ],
                         ),
                       ),
+
                       Text('Email', style: TextStyle(color: Colors.grey.shade600,fontWeight: FontWeight.bold,fontSize: 14),),
                       SizedBox(height: Dimensions.height10/2,),
                       TextFieldApp(controller: email, validation: 'email is not registered',hint: 'EG. example@emai.com',isPassword: false,),
                       SizedBox(height: Dimensions.height20/5,),
+
                       Text('Phone Number', style: TextStyle(color: Colors.grey.shade600,fontWeight: FontWeight.bold,fontSize: 14),),
                       SizedBox(height: Dimensions.height10/2,),
                       Column(
@@ -137,9 +141,11 @@ class RegisterScreen extends StatelessWidget {
                         ],
                       ),
                       SizedBox(height: Dimensions.height20/5,),
+
                       Text('password', style: TextStyle(color: Colors.grey.shade600,fontWeight: FontWeight.bold,fontSize: 14),),
                       SizedBox(height: Dimensions.height10/2,),
                       TextFieldApp(controller: password, validation: 'password is not registered',isPassword: true,hint: 'Password',),
+
                       ButtonApp(text: 'Register', color: ColorsApp.buttonColor, function: (){
                         if (_formKey.currentState!.validate()) {
                           ScaffoldMessenger.of(context).showSnackBar(
@@ -150,6 +156,7 @@ class RegisterScreen extends StatelessWidget {
                           controllers.empty();
                         }
                       }),
+
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
@@ -168,6 +175,7 @@ class RegisterScreen extends StatelessWidget {
                           )
                         ],
                       ),
+
                       Container(
                         padding:const EdgeInsets.symmetric(vertical: 15) ,
                         margin:const EdgeInsets.symmetric(vertical: 20) ,
@@ -190,11 +198,13 @@ class RegisterScreen extends StatelessWidget {
                           ),
                         ),
                       ),
+
                       InkWell(
                           onTap: (){
                             AppRoute.push(LoginScreen());
                           },
                           child: RichTextApp(firstText: 'Has any account?', secondText: ' Sign in here', firstColor: Colors.black, secondColor: ColorsApp.buttonColor,fistWeight: FontWeight.w500,secondWeight: FontWeight.w500,)),
+
                       SizedBox(height: Dimensions.height10,),
                       RichTextApp(firstText: 'by registering your account, you are agree to our\n', secondText: 'terms and conditions', firstColor: Colors.grey, secondColor: ColorsApp.buttonColor,fistWeight: FontWeight.w500,secondWeight: FontWeight.w500,firstSize: 12,secondSize: 12,)              ],
                   ),

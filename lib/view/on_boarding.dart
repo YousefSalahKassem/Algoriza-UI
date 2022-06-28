@@ -41,7 +41,9 @@ class OnBoardingScreen extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: Dimensions.height20,),
+
                 RichTextApp(firstText: '7', secondText: 'Krave', firstColor: ColorsApp.dotsColor, secondColor: ColorsApp.primary,firstSize: Dimensions.height30*1.2,secondSize: Dimensions.height30*1.2,),
+
                 Expanded(
                   child: PageView.builder(
                     controller: controller.pageController,
@@ -83,6 +85,7 @@ class OnBoardingScreen extends StatelessWidget {
                     },
                   ),
                 ),
+
                 SizedBox(
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -93,7 +96,9 @@ class OnBoardingScreen extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: Dimensions.height10,),
+
                 ButtonApp(text: 'Get Started', color: ColorsApp.primary,function: (){controller.nextPage();},),
+
                 InkWell(
                     onTap: (){controller.goToRegister();},
                     child: RichTextApp(firstText: 'Don\'t have an account?', secondText: ' Sign Up', firstColor: Colors.black, secondColor: ColorsApp.primary,fistWeight: FontWeight.w500,secondWeight: FontWeight.w500,)),

@@ -1,5 +1,3 @@
-import 'dart:ffi';
-
 import 'package:algorizaui/components/Buttons.dart';
 import 'package:algorizaui/components/rich_text.dart';
 import 'package:algorizaui/constants/colors.dart';
@@ -9,7 +7,6 @@ import 'package:algorizaui/helper/routes.dart';
 import 'package:algorizaui/view/register_screen.dart';
 import 'package:country_code_picker/country_code_picker.dart';
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -30,6 +27,7 @@ class LoginScreen extends StatelessWidget {
                     image: DecorationImage(image: AssetImage('images/background.png'),fit: BoxFit.cover)
                   ),
                 ),
+
                 Expanded(
                     child: Padding(
                     padding: const EdgeInsets.all(15.0), child: Column(
@@ -37,6 +35,7 @@ class LoginScreen extends StatelessWidget {
                     children: [
                       SizedBox(height: Dimensions.height15,),
                       const Text('Welcome to Fashion Daily',style: TextStyle(color: Colors.grey,fontWeight: FontWeight.bold,fontSize: 14),),
+
                       Padding(
                         padding:  EdgeInsets.symmetric(vertical: Dimensions.height20),
                         child: Row(
@@ -53,6 +52,7 @@ class LoginScreen extends StatelessWidget {
                           ],
                         ),
                       ),
+
                       Text('Phone Number', style: TextStyle(color: Colors.grey.shade600,fontWeight: FontWeight.bold,fontSize: 14),),
                       SizedBox(height: Dimensions.height10/2,),
                       Column(
@@ -109,11 +109,13 @@ class LoginScreen extends StatelessWidget {
 
                         ],
                       ),
+
                       ButtonApp(text: 'Sign In', color: ColorsApp.buttonColor, function: (){
                         if(phone.text.isEmpty){
                           controllers.empty();
                         }
                       }),
+
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
@@ -132,6 +134,7 @@ class LoginScreen extends StatelessWidget {
                           )
                         ],
                       ),
+
                       Container(
                         padding:const EdgeInsets.symmetric(vertical: 15) ,
                         margin:const EdgeInsets.symmetric(vertical: 20) ,
@@ -154,11 +157,13 @@ class LoginScreen extends StatelessWidget {
                           ),
                         ),
                       ),
+
                       InkWell(
                           onTap: (){
                             AppRoute.push( RegisterScreen());
                           },
                           child: RichTextApp(firstText: 'Doesn\'t has any account?', secondText: ' Register here', firstColor: Colors.black, secondColor: ColorsApp.buttonColor,fistWeight: FontWeight.w500,secondWeight: FontWeight.w500,)),
+
                       SizedBox(height: Dimensions.height30,),
                       const Text('use the application according to policy rules. Any kinds of violations will be subject to sanctions.',textAlign: TextAlign.center,style: TextStyle(color: Colors.grey,fontWeight: FontWeight.bold,fontSize: 14),),
                     ],
